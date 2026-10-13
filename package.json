@@ -1,0 +1,20 @@
+{
+  "name": "teamdocs",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run build --workspace=@teamdocs/contracts && npm run dev --workspace=@teamdocs/web",
+    "dev:api": "npm run build --workspace=@teamdocs/contracts && npm run start:dev --workspace=@teamdocs/api",
+    "typecheck": "npm run build --workspace=@teamdocs/contracts && npm run typecheck --workspace=@teamdocs/web && npm run typecheck --workspace=@teamdocs/api",
+    "build": "npm run build --workspace=@teamdocs/contracts && npm run build --workspace=@teamdocs/web && npm run build --workspace=@teamdocs/api",
+    "lint": "npm run lint --workspace=@teamdocs/web && npm run lint --workspace=@teamdocs/api",
+    "test": "npm run build --workspace=@teamdocs/contracts && npm run test --workspace=@teamdocs/api",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  }
+}

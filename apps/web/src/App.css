@@ -1,0 +1,80 @@
+.app-shell {
+  width: min(760px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.eyebrow {
+  color: #6658d9;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 640px;
+  color: #5a6072;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.status-card,
+.architecture {
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid #dfe3ec;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgb(29 38 72 / 8%);
+}
+
+.status-card h2,
+.architecture h2 {
+  margin-top: 0;
+}
+
+dl {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+}
+
+dt {
+  color: #687087;
+}
+
+dd {
+  margin: 0;
+  color: #1e2433;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architecture ol {
+  display: grid;
+  gap: 12px;
+  padding-left: 24px;
+  line-height: 1.6;
+}
+
+.error {
+  color: #b42318;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: min(100% - 32px, 760px);
+    padding: 56px 0;
+  }
+
+  dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

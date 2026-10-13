@@ -1,0 +1,22 @@
+# Dependencies and generated output
+node_modules/
+apps/*/node_modules/
+apps/*/dist/
+packages/*/dist/
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Local environment, VCS and editor state
+.env
+.env.*
+!.env.example
+.git/
+.gitignore
+.DS_Store
+.idea/
+.vscode/
+
+# Logs and coverage
+*.log
+coverage/
+apps/*/coverage/
