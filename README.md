@@ -8,7 +8,7 @@
 /Applications/MAMP/htdocs/teamdocs
 ```
 
-Подробная памятка по runtime-валидации: [`docs/ZOD_GUIDE.md`](docs/ZOD_GUIDE.md).
+Централизованная документация проекта: [`documentation/`](documentation/README.md). Подробная памятка по runtime-валидации: [`documentation/docs/engineering/zod.md`](documentation/docs/engineering/zod.md).
 
 > Цель текущего этапа — не «сразу написать всё приложение», а создать корректные границы: browser ↔ API ↔ общий контракт. На этом фундаменте дальше будут появляться база данных, авторизация, документы, поиск и AI-модуль.
 
