@@ -22,3 +22,5 @@ TeamDocs — учебный full-stack проект для работы с до�
 | Documentation | Docusaurus в `documentation/` |
 
 PostgreSQL уже запускается в Compose, но application-level ORM, migrations и модели ещё не реализованы.
+
+Полный целевой результат, пользовательские сценарии, функциональные границы и порядок реализации зафиксированы в [Product vision](./product-vision).

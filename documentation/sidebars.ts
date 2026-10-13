@@ -6,7 +6,12 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Проект',
-      items: ['project/overview', 'project/architecture', 'project/repository-structure'],
+      items: [
+        'project/overview',
+        'project/product-vision',
+        'project/architecture',
+        'project/repository-structure',
+      ],
     },
     {
       type: 'category',

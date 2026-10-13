@@ -103,7 +103,47 @@ teamdocs/
 
 Работает первый вертикальный сценарий: frontend обращается к `GET /api/health` через Vite proxy, API возвращает проверенный shared contract, а UI обрабатывает loading, ready и error states.
 
-Следующие продуктовые этапы: PostgreSQL integration и migrations, CRUD документов, authentication/RBAC, затем отдельный Python/AI service и RAG.
+Полный конечный сценарий, роли, пользовательские flows и функциональные границы описаны в [Product vision](documentation/docs/project/product-vision.md).
+
+## Продуктовый backlog
+
+Отмечай пункт только после того, как функция реализована, проверена и описана в `documentation/`.
+
+### Foundation
+
+- [x] React frontend, NestJS API и npm workspaces.
+- [x] Shared health contract и frontend → API vertical slice.
+- [x] Docker Compose с PostgreSQL persistent volume.
+- [x] API unit-test foundation через Vitest.
+- [x] Отдельный Docusaurus documentation service.
+
+### Документы и доступ
+
+- [ ] Database client, migrations и реальное подключение PostgreSQL из API.
+- [ ] User, workspace и membership model.
+- [ ] Registration, login, logout и session/refresh flow.
+- [ ] RBAC guards и server-side policy checks.
+- [ ] Document CRUD API: создание, чтение, обновление, публикация и архивирование.
+- [ ] Document list/detail UI с pagination, filters, empty и error states.
+- [ ] Integration tests для API и PostgreSQL.
+- [ ] Audit trail критичных действий.
+
+### Поиск и AI
+
+- [ ] File upload/storage и extraction поддерживаемых документов.
+- [ ] Background indexing jobs, retries и observability.
+- [ ] Chunks, embeddings и vector persistence.
+- [ ] Search только в пределах разрешённых документов.
+- [ ] AI answers с citations на исходные документы.
+- [ ] Evaluation dataset, quality checks, quotas и budget control.
+
+### Production readiness
+
+- [ ] CI для application и documentation checks.
+- [ ] Structured logs, metrics и error tracking.
+- [ ] Backup/restore для PostgreSQL.
+- [ ] Security review: secrets, CORS, headers, abuse prevention и access boundaries.
+- [ ] Staging deployment, release checklist и demo scenario.
 
 ## Где искать информацию
 
